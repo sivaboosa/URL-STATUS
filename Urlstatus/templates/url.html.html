@@ -1,0 +1,20 @@
+<h1> URL TEsting </h1>
+
+
+<form action="/startTesting/" method="post" >
+    <input type="text" name="content"/>
+    <input type="submit" value="start"/>
+
+</form action="/stopTesting/" method="post">
+<input type="submit" value="stop" />
+
+<form>
+
+</form>
+<ul>
+    {% for item in result %}
+    <li>
+    status : { { item.content}}
+    </li>
+    {% endfor %}
+</ul>
