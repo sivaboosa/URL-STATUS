@@ -2,6 +2,7 @@
 
 
 <form action="/startTesting/" method="post" >
+    {% csrf_token %}
     <input type="text" name="content"/>
     <input type="submit" value="start"/>
 
@@ -14,7 +15,7 @@
 <ul>
     {% for item in result %}
     <li>
-    status : { { item.content}}
+     {{ item.content}}
     </li>
     {% endfor %}
 </ul>
